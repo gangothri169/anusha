@@ -65,14 +65,25 @@ function App() {
                     November 14, 2025 • One year of love, laughter & choosing each other every single day. <br />
                     Here's to forever. ✨
                   </p>
-                  <div className="flex flex-wrap gap-3 justify-center text-sm font-lato text-amber-700">
-                    {['🎯 Take the Quiz', '📸 View Gallery', '💌 Open Letters', '🎊 Anniversary Wishes'].map((tag) => (
-                      <span
-                        key={tag}
-                        className="bg-white/60 border border-rose-200 rounded-full px-4 py-1.5 hover:bg-rose-50 transition-colors cursor-default"
+                  <div className="flex flex-wrap gap-3 justify-center text-sm font-lato text-amber-900">
+                    {[
+                      { label: '🎯 Take the Quiz', target: '#quiz' },
+                      { label: '📸 View Gallery', target: '#gallery' },
+                      { label: '💌 Open Letters', target: '#letters' },
+                      { label: '🎊 Anniversary Wishes', target: '#wishes' },
+                    ].map((item) => (
+                      <motion.button
+                        key={item.label}
+                        whileHover={{ scale: 1.06, y: -2 }}
+                        whileTap={{ scale: 0.96 }}
+                        onClick={() => {
+                          const el = document.querySelector(item.target);
+                          if (el) el.scrollIntoView({ behavior: 'smooth' });
+                        }}
+                        className="bg-white/85 border border-rose-300 shadow-sm rounded-full px-5 py-2 hover:bg-rose-50 hover:border-rose-400 text-amber-900 font-medium transition-all cursor-pointer"
                       >
-                        {tag}
-                      </span>
+                        {item.label}
+                      </motion.button>
                     ))}
                   </div>
                 </motion.div>
