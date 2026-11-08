@@ -49,7 +49,7 @@ const Navbar = ({ visible }: NavbarProps) => {
           className="flex items-center gap-2 font-dancing text-xl text-rose-500 hover:text-rose-600 transition-colors"
         >
           <Heart size={18} className="animate-heartbeat fill-rose-400 text-rose-400" />
-          <span>Our Love Story</span>
+          <span className="font-bold">Kranu ♡</span>
         </button>
 
         {/* Desktop nav */}

@@ -52,14 +52,17 @@ function App() {
                   transition={{ duration: 0.8, delay: 0.3 }}
                 >
                   <div className="text-5xl mb-6 select-none animate-float">🌸 💕 🌸</div>
-                  <h1 className="font-dancing text-5xl md:text-7xl gradient-text mb-6 leading-tight">
-                    Welcome to Your Love Story ♡
+                  <h1 className="font-dancing text-5xl md:text-7xl gradient-text mb-2 leading-tight">
+                    Anusha & Krishna ♡
                   </h1>
+                  <p className="font-dancing text-rose-500 text-2xl md:text-3xl mb-4 font-bold">
+                    #Kranu • 1st Anniversary ✨
+                  </p>
                   <p className="font-playfair italic text-amber-800 text-xl md:text-2xl mb-4 leading-relaxed">
                     "In all the world, there is no heart for me like yours."
                   </p>
                   <p className="font-lato text-amber-700 text-base mb-8 leading-relaxed">
-                    One year. 365 days. 8,760 hours of choosing each other. <br />
+                    November 14, 2025 • One year of love, laughter & choosing each other every single day. <br />
                     Here's to forever. ✨
                   </p>
                   <div className="flex flex-wrap gap-3 justify-center text-sm font-lato text-amber-700">

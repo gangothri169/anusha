@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Heart, Sparkles } from 'lucide-react';
 import { config } from '../data/config';
@@ -20,7 +20,6 @@ const COLORS = ['#e8a0b0', '#f9d9e3', '#8aad8a', '#f9e4a0', '#c06070', '#d4a0d0'
 const AnniversarySurprise = () => {
   const [celebrating, setCelebrating] = useState(false);
   const [confetti, setConfetti] = useState<Confetti[]>([]);
-  const rafRef = useRef<number | null>(null);
 
   const launchCelebration = () => {
     setCelebrating(true);
@@ -40,7 +39,7 @@ const AnniversarySurprise = () => {
     setTimeout(() => {
       setCelebrating(false);
       setConfetti([]);
-    }, 4000);
+    }, 4500);
   };
 
   return (
@@ -97,15 +96,23 @@ const AnniversarySurprise = () => {
           <motion.div
             animate={{ y: [0, -10, 0] }}
             transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
-            className="text-3xl mb-6 select-none"
+            className="text-3xl mb-4 select-none"
           >
             🌸 💕 🌸
           </motion.div>
 
+          <p className="font-dancing text-rose-400 text-xl md:text-2xl mb-1">
+            {config.ANNIVERSARY_DATE}
+          </p>
+
           {/* Main heading */}
-          <h2 className="font-dancing text-4xl md:text-6xl text-rose-200 mb-4 leading-tight">
+          <h2 className="font-dancing text-4xl md:text-6xl text-rose-200 mb-2 leading-tight">
             And This Is Just the Beginning...
           </h2>
+
+          <p className="font-playfair text-xl md:text-2xl text-rose-300 font-semibold mb-6">
+            {config.PARTNER_1_NAME} & {config.PARTNER_2_NAME} ({config.COUPLE_NAME} ♡)
+          </p>
 
           <div className="w-32 h-px bg-rose-400 mx-auto mb-8 opacity-50" />
 
@@ -132,7 +139,7 @@ const AnniversarySurprise = () => {
                 delay: 0.7,
               },
               {
-                text: `Happy First Anniversary to my favourite couple! 🥂✨`,
+                text: `Happy First Anniversary to my favourite couple, Anusha & Krishna! 🥂✨`,
                 delay: 0.9,
                 special: true,
               },
@@ -145,7 +152,7 @@ const AnniversarySurprise = () => {
                 transition={{ delay: msg.delay }}
                 className={`leading-relaxed mx-auto max-w-xl ${
                   msg.special
-                    ? 'font-dancing text-rose-200 text-2xl'
+                    ? 'font-dancing text-rose-200 text-2xl md:text-3xl'
                     : 'font-lato text-rose-100/80 text-base md:text-lg'
                 }`}
               >
@@ -154,7 +161,7 @@ const AnniversarySurprise = () => {
             ))}
           </div>
 
-          {/* From */}
+          {/* From - using config.FROM_TEXT so NO personal name is added */}
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
@@ -166,7 +173,7 @@ const AnniversarySurprise = () => {
               With all the love in the world,
             </p>
             <p className="font-dancing text-rose-300 text-2xl font-bold mt-1">
-              {config.FROM_NAME} 💕
+              {config.FROM_TEXT} ♡
             </p>
           </motion.div>
 
@@ -184,7 +191,7 @@ const AnniversarySurprise = () => {
               className="btn-magical text-lg flex items-center gap-2 mx-auto"
             >
               <Sparkles size={20} />
-              Celebrate Again ♡
+              Celebrate Kranu Again ♡
               <Heart size={18} className="fill-white" />
             </motion.button>
           </motion.div>
@@ -231,11 +238,11 @@ const AnniversarySurprise = () => {
           >
             <motion.div
               initial={{ scale: 0 }}
-              animate={{ scale: [1, 1.5, 1], opacity: [1, 0.8, 0] }}
-              transition={{ duration: 1.5 }}
+              animate={{ scale: [1, 1.4, 1], opacity: [1, 0.9, 0] }}
+              transition={{ duration: 1.6 }}
               className="text-8xl select-none"
             >
-              🎊💕🎊
+              🎉💖💍
             </motion.div>
           </motion.div>
         )}

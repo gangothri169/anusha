@@ -1,23 +1,11 @@
 // ============================================================
 // QUIZ QUESTIONS DATA FILE
 // ============================================================
-// You can easily edit all quiz questions and answers here.
-// 
-// HOW TO EDIT:
-// - Change the "question" text to your preferred question.
-// - Change "optionA" and "optionB" to your couple's names.
-// - For Round 2, change the "options" array.
-// - For Round 2, set "correctAnswer" to the index (0, 1, 2, or 3)
-//   of the correct option in the options array.
-//   Example: correctAnswer: 1 means the second option is correct.
-// - Change "funnyFeedback" to any funny response you want.
-// ============================================================
 
-// 🔧 CHANGE THESE NAMES to match the couple's names
-export const PARTNER_A = "She";       // e.g., "Priya" or your sister's name
-export const PARTNER_B = "He";        // e.g., "Arjun" or her husband's name
-export const PARTNER_A_NAME = "Her";  // possessive form
-export const PARTNER_B_NAME = "His";  // possessive form
+export const PARTNER_A = "Anusha";
+export const PARTNER_B = "Krishna";
+export const PARTNER_A_NAME = "Anusha's";
+export const PARTNER_B_NAME = "Krishna's";
 
 // ============================================================
 // ROUND 1: WHO IS MORE LIKELY TO?
@@ -40,8 +28,8 @@ export const round1Questions: Round1Question[] = [
     optionA: PARTNER_A,
     optionB: PARTNER_B,
     funnyFeedback: {
-      A: "She's out before the first episode ends! 😴",
-      B: "He's snoring before she even picks a show! 😂",
+      A: "Anusha is out before the first episode ends! 😴",
+      B: "Krishna is snoring before she even picks a show! 😂",
     },
   },
   {
@@ -50,18 +38,18 @@ export const round1Questions: Round1Question[] = [
     optionA: PARTNER_A,
     optionB: PARTNER_B,
     funnyFeedback: {
-      A: "\"I just want a small bite\" — takes half the plate! 🍽️",
-      B: "\"That looks interesting\" — it was YOUR food! 😆",
+      A: "\"I just want a small bite\" — takes half of Krishna's plate! 🍽️",
+      B: "\"That looks interesting\" — steals it straight from Anusha! 😆",
     },
   },
   {
     id: 3,
-    question: "Who gets upset over the tiniest things?",
+    question: "Who gets dramatic over the smallest things?",
     optionA: PARTNER_A,
     optionB: PARTNER_B,
     funnyFeedback: {
-      A: "The drama level: Oscar-worthy performance 🎭",
-      B: "He once sulked because she ate the last biscuit 🍪",
+      A: "Anusha's drama level: Oscar-worthy performance 🎭✨",
+      B: "Krishna once sulked because she ate the last snack 🍪😂",
     },
   },
   {
@@ -70,8 +58,8 @@ export const round1Questions: Round1Question[] = [
     optionA: PARTNER_A,
     optionB: PARTNER_B,
     funnyFeedback: {
-      A: "\"5 more minutes\" has a 45-minute hidden meaning 😂",
-      B: "He's a mystery. No one knows what takes so long! 🕵️",
+      A: "Anusha's \"5 more minutes\" is mathematically 45 minutes 😂",
+      B: "Krishna says \"I'm ready\" while still looking for his watch 🕵️",
     },
   },
   {
@@ -80,18 +68,18 @@ export const round1Questions: Round1Question[] = [
     optionA: PARTNER_A,
     optionB: PARTNER_B,
     funnyFeedback: {
-      A: "A tiny cold becomes a whole Netflix documentary 🎬",
-      B: "Man-flu is REAL and very very serious 🤧",
+      A: "A tiny sniffle becomes a full-blown melodrama 🎬",
+      B: "Man-flu hits Krishna like a category 5 storm 🤧",
     },
   },
   {
     id: 6,
-    question: "Who always says sorry first after a fight?",
+    question: "Who always says sorry first after a silly fight?",
     optionA: PARTNER_A,
     optionB: PARTNER_B,
     funnyFeedback: {
-      A: "The bigger person. Always! 💖",
-      B: "He cracks first. With food. Smart move! 🍕",
+      A: "The queen with the bigger heart! Always Anusha 💖",
+      B: "Krishna cracks first... usually by offering yummy food! 🍕",
     },
   },
   {
@@ -100,8 +88,8 @@ export const round1Questions: Round1Question[] = [
     optionA: PARTNER_A,
     optionB: PARTNER_B,
     funnyFeedback: {
-      A: "Brain like a sieve, heart of gold! 🥰",
-      B: "His memory has a unique filing system... mostly lost 🗂️",
+      A: "Heart of gold, memory of a cute goldfish! 🥰",
+      B: "Krishna's keys and wallet are constantly on adventure quests 🗂️",
     },
   },
   {
@@ -110,8 +98,8 @@ export const round1Questions: Round1Question[] = [
     optionA: PARTNER_A,
     optionB: PARTNER_B,
     funnyFeedback: {
-      A: "She plans the trip around the restaurants 🗺️🍜",
-      B: "His love language is definitely food 🍔❤️",
+      A: "Anusha plans entire trips around the restaurant menus 🍜",
+      B: "Krishna's true love language is definitely delicious food 🍔❤️",
     },
   },
 ];
@@ -119,8 +107,6 @@ export const round1Questions: Round1Question[] = [
 // ============================================================
 // ROUND 2: HOW WELL DO YOU KNOW EACH OTHER?
 // ============================================================
-// correctAnswer: index of the correct option (0 = first, 1 = second, etc.)
-// Set to -1 if you don't want any "correct" answer tracked.
 export interface Round2Question {
   id: number;
   question: string;
@@ -133,44 +119,44 @@ export const round2Questions: Round2Question[] = [
   {
     id: 1,
     question: "What is your partner's absolute favourite food?",
-    options: ["Biryani 🍚", "Pizza 🍕", "Dosa 🫓", "Anything free! 😂"],
-    correctAnswer: -1, // set to 0, 1, 2, or 3 once you know!
-    funnyFeedback: "Every couple should know this. EVERY. SINGLE. ONE. 🍴",
+    options: ["Biryani 🍚", "Pizza & Pasta 🍕", "Crispy Dosa 🫓", "Whatever is on YOUR plate! 😂"],
+    correctAnswer: -1,
+    funnyFeedback: "Every couple should know this by heart! #Kranu 🍴",
   },
   {
     id: 2,
     question: "What instantly makes your partner happy?",
-    options: ["Good food 🍜", "A surprise hug 🤗", "A funny meme 😂", "Being left alone with Netflix 📺"],
+    options: ["Good food 🍜", "A tight warm hug 🤗", "A funny reel/meme 😂", "Uninterrupted sleep 😴"],
     correctAnswer: -1,
-    funnyFeedback: "Love is knowing exactly what button to press! 💡",
+    funnyFeedback: "Love is knowing exactly what brings that sweet smile! 💡",
   },
   {
     id: 3,
-    question: "What is your partner's dream holiday destination?",
-    options: ["Beach in Maldives 🏝️", "Europe trip ✈️", "Mountains & trekking 🏔️", "Anywhere with good food 🌍"],
+    question: "What is your partner's dream holiday vibe?",
+    options: ["Tropical beach relaxing 🏝️", "Misty mountains & tea estates 🏔️", "European city exploration ✈️", "Cozy staycation with great food ☕"],
     correctAnswer: -1,
-    funnyFeedback: "Start saving! Their dream trip isn't going to book itself! 🧳",
+    funnyFeedback: "Time to pack those bags for the next Kranu adventure! 🧳",
   },
   {
     id: 4,
-    question: "What is your partner's most-used sentence?",
-    options: ["\"Just 5 more minutes\" ⏰", "\"I'm hungry\" 🍽️", "\"What do you want to eat?\" 🤔", "\"Fine, whatever\" 😑"],
+    question: "What is your partner's most-used daily line?",
+    options: ["\"Just 5 more minutes\" ⏰", "\"What should we order?\" 🍽️", "\"Where did I keep that?\" 🤔", "\"I told you so!\" 😏"],
     correctAnswer: -1,
-    funnyFeedback: "You finish each other's sentences. That's married life! 💬",
+    funnyFeedback: "One year of hearing this line every single day! 💬",
   },
   {
     id: 5,
     question: "What is one thing your partner absolutely cannot live without?",
-    options: ["Their phone 📱", "Coffee/Tea ☕", "You! 💕", "Sleep 😴"],
+    options: ["Their phone 📱", "Chai / Coffee ☕", "YOU! 💕", "Their pillow & blanket 😴"],
     correctAnswer: -1,
-    funnyFeedback: "Be honest. You know the real answer! 😏",
+    funnyFeedback: "We all know the real answer is each other! (And maybe chai) 😏",
   },
   {
     id: 6,
-    question: "What is your partner's favourite way to spend a lazy weekend?",
-    options: ["Netflix binge 📺", "Going out exploring 🚗", "Long afternoon nap 😪", "Cooking and eating together 🍳"],
+    question: "What is your partner's favourite way to spend a lazy Sunday?",
+    options: ["Binge-watching shows 📺", "Going for a fun drive 🚗", "A 3-hour afternoon nap 😪", "Cooking a feast together 🍳"],
     correctAnswer: -1,
-    funnyFeedback: "Weekends reveal your true personality. No filters! 😄",
+    funnyFeedback: "Lazy Sundays together are what married life is made of! 😄",
   },
 ];
 
@@ -191,12 +177,12 @@ export interface Round3Question {
 export const round3Questions: Round3Question[] = [
   {
     id: 1,
-    question: "Who would survive longer without their phone?",
+    question: "Who would survive longer without their smartphone?",
     optionA: PARTNER_A,
     optionB: PARTNER_B,
     funnyFeedback: {
-      A: "She'd last maybe 3 hours. Definitely not more 📵",
-      B: "He'd somehow survive 2 hours before cracking 😂",
+      A: "Anusha checking for notifications in her sleep: 0.5 hours 📵",
+      B: "Krishna would last an hour before needing to Google something 😂",
     },
   },
   {
@@ -205,48 +191,48 @@ export const round3Questions: Round3Question[] = [
     optionA: PARTNER_A,
     optionB: PARTNER_B,
     funnyFeedback: {
-      A: "The smoke alarm is basically their kitchen timer 🔥",
-      B: "He cooks with confidence. Dangerous confidence 🍳💀",
+      A: "Smoke detector is not a fire alarm, it's Anusha's timer 🔥",
+      B: "Krishna cooks with unstoppable confidence and high heat 🍳💀",
     },
   },
   {
     id: 3,
-    question: "Who would win an argument even when they're completely wrong?",
+    question: "Who would win an argument even when they are totally wrong?",
     optionA: PARTNER_A,
     optionB: PARTNER_B,
     funnyFeedback: {
-      A: "She has never lost an argument. Technically. 👑",
-      B: "He'll Google facts mid-argument. And still use them wrong 😂",
+      A: "Anusha has never technically lost an argument in history 👑",
+      B: "Krishna will pull out Wikipedia charts and still lose 😂",
     },
   },
   {
     id: 4,
-    question: "Who is more likely to make unnecessary purchases?",
+    question: "Who is more likely to make random online purchases?",
     optionA: PARTNER_A,
     optionB: PARTNER_B,
     funnyFeedback: {
-      A: "\"It was on SALE!\" – the official justification 🛍️",
-      B: "He bought a gadget he used once and forgot 🤦",
+      A: "\"It was 40% OFF, Krishna! I actually saved money!\" 🛍️",
+      B: "Krishna bought another gadget that now lives in a drawer 🤦",
     },
   },
   {
     id: 5,
-    question: "Who would forget an anniversary gift until the last minute?",
+    question: "Who would panic about anniversary plans at the last minute?",
     optionA: PARTNER_A,
     optionB: PARTNER_B,
     funnyFeedback: {
-      A: "She panic-buys 30 minutes before the dinner 🎁😅",
-      B: "His gift: 'I love you?' — delivered with a nervous smile 💝",
+      A: "Anusha with 14 open browser tabs 30 minutes before 🎁😅",
+      B: "Krishna with that charming 'you are my gift' nervous smile 💝",
     },
   },
   {
     id: 6,
-    question: "Who is the bigger drama royalty?",
+    question: "Who is the undisputed drama royalty in this marriage?",
     optionA: PARTNER_A,
     optionB: PARTNER_B,
     funnyFeedback: {
-      A: "Academy Award waiting to happen 🎭👸",
-      B: "One small inconvenience = full life crisis 👑😂",
+      A: "Filmfare Best Actress Award goes to... Anusha! 🎭👸",
+      B: "Krishna when his favorite cricket match gets interrupted 👑😂",
     },
   },
 ];
@@ -259,28 +245,28 @@ export const quizResults = [
     minPercent: 90,
     maxPercent: 100,
     title: "Soulmate Certified! 💍✨",
-    message: "You two don't need relationship tutorials. You ARE the tutorial. Somebody put a trophy somewhere!",
+    message: "Kranu is officially unbeatable! You two don't need relationship tutorials — you ARE the tutorial. Happy 1st Anniversary!",
     emoji: "🏆",
   },
   {
     minPercent: 70,
     maxPercent: 89,
     title: "Lovebirds! 🐦💕",
-    message: "You know each other pretty well! A few blind spots, but nothing a little more couple-time can't fix.",
+    message: "Kranu knows each other inside out! A year full of understanding, laughter, and unbreakable love.",
     emoji: "🌸",
   },
   {
     minPercent: 40,
     maxPercent: 69,
     title: "Interesting... 🤔",
-    message: "Someone needs to start paying more attention! Put down your phone and look at your partner please!",
+    message: "Someone needs to start taking notes! Put the phone down and study your partner please! 😂",
     emoji: "👀",
   },
   {
     minPercent: 0,
     maxPercent: 39,
     title: "REMEDIAL CLASSES REQUIRED! 😂",
-    message: "PLEASE ATTEND ANNIVERSARY REMEDIAL CLASSES! One year together and this is the score?! For shame! 😂 (We still love you both though ♡)",
+    message: "PLEASE ATTEND ANNIVERSARY REMEDIAL CLASSES! One year of Kranu and this is the score?! 😂 (We still love you both endlessly ♡)",
     emoji: "📚",
   },
 ];

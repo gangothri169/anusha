@@ -1,6 +1,7 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import { Heart, Sparkles } from 'lucide-react';
 import heroImg from '../assets/images/hero.jpg';
+import { config } from '../data/config';
 
 interface HeroProps {
   onEnter: () => void;
@@ -72,48 +73,58 @@ const Hero = ({ onEnter, visible }: HeroProps) => {
             <motion.div
               animate={{ y: [0, -8, 0] }}
               transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
-              className="text-3xl mb-4 select-none"
+              className="text-3xl mb-3 select-none"
             >
               🌸 ✨ 🌸
             </motion.div>
 
-            {/* Pre-title */}
+            {/* Anniversary Tag */}
             <motion.p
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.6, duration: 0.8 }}
-              className="font-dancing text-rose-400 text-xl md:text-2xl mb-2"
+              transition={{ delay: 0.5, duration: 0.8 }}
+              className="font-dancing text-rose-500 text-xl md:text-2xl mb-1"
             >
-              A little love story, just for you
+              {config.ANNIVERSARY_DATE}
             </motion.p>
 
             {/* Happy Anniversary */}
             <motion.h1
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 0.8, duration: 0.8 }}
-              className="font-dancing gradient-text text-4xl md:text-6xl font-bold mb-6"
+              transition={{ delay: 0.7, duration: 0.8 }}
+              className="font-dancing gradient-text text-4xl md:text-6xl font-bold mb-1"
             >
               Happy 1st Anniversary! 🎊
             </motion.h1>
+
+            {/* Couple Name */}
+            <motion.p
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.9, duration: 0.8 }}
+              className="font-playfair text-xl md:text-2xl text-amber-900 font-semibold mb-5 tracking-wide"
+            >
+              {config.PARTNER_1_NAME} & {config.PARTNER_2_NAME} <span className="text-rose-400 font-dancing">({config.COUPLE_NAME} ♡)</span>
+            </motion.p>
 
             {/* Hero image */}
             <motion.div
               initial={{ opacity: 0, scale: 0.85 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 1, duration: 0.9 }}
-              className="relative mb-6 animate-glow"
+              className="relative mb-5 animate-glow"
               style={{
                 borderRadius: '60% 40% 55% 45% / 40% 55% 45% 60%',
                 overflow: 'hidden',
                 border: '4px solid rgba(232, 160, 176, 0.5)',
-                width: 'clamp(220px, 55vw, 320px)',
+                width: 'clamp(210px, 50vw, 300px)',
                 aspectRatio: '3/4',
               }}
             >
               <img
                 src={heroImg}
-                alt="Our couple"
+                alt="Anusha & Krishna"
                 style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center top' }}
               />
               {/* Sparkle overlay */}
@@ -133,8 +144,8 @@ const Hero = ({ onEnter, visible }: HeroProps) => {
             <motion.p
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ delay: 1.4, duration: 0.8 }}
-              className="font-playfair italic text-amber-800 text-lg md:text-xl mb-3 leading-relaxed"
+              transition={{ delay: 1.3, duration: 0.8 }}
+              className="font-playfair italic text-amber-900 text-lg md:text-xl mb-2 leading-relaxed"
             >
               "Once upon a time, two people found each other..."
             </motion.p>
@@ -142,8 +153,8 @@ const Hero = ({ onEnter, visible }: HeroProps) => {
             <motion.p
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ delay: 1.7, duration: 0.8 }}
-              className="font-lato text-amber-700 text-sm md:text-base mb-8 leading-relaxed max-w-md"
+              transition={{ delay: 1.5, duration: 0.8 }}
+              className="font-lato text-amber-800 text-sm md:text-base mb-6 leading-relaxed max-w-md"
             >
               365 days of love, laughter, arguments over silly things and choosing each other every single day.
             </motion.p>
@@ -152,7 +163,7 @@ const Hero = ({ onEnter, visible }: HeroProps) => {
             <motion.button
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 2, duration: 0.6 }}
+              transition={{ delay: 1.8, duration: 0.6 }}
               whileHover={{ scale: 1.06 }}
               whileTap={{ scale: 0.97 }}
               onClick={onEnter}
@@ -166,7 +177,7 @@ const Hero = ({ onEnter, visible }: HeroProps) => {
             <motion.div
               animate={{ y: [0, 5, 0] }}
               transition={{ duration: 2.5, repeat: Infinity, ease: 'easeInOut', delay: 0.5 }}
-              className="mt-6 text-2xl select-none"
+              className="mt-5 text-2xl select-none"
             >
               💕 🌸 💕
             </motion.div>
